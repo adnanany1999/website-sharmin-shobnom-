@@ -2,377 +2,506 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio of Sharmin Shobnom Joya - Project Management & Advocacy Specialist with over 20 years of experience in Bangladesh’s development sector.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of Sharmin Shobnom Joya - Project Management & Advocacy Specialist">
     <title>Sharmin Shobnom Joya | Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Sharmin S. Joya</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="noise-overlay"></div>
+    <div class="orb orb--yellow"></div>
+    <div class="orb orb--violet"></div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <p class="subtitle">Hello, I am</p>
-                <h1>Sharmin Shobnom Joya</h1>
-                <h2>Project Management & Advocacy Specialist</h2>
-                <p class="description">Over 20 years of experience in Bangladesh’s development sector, driving
-                    organizational development and advancing gender equality.</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="Resume_Sharmin_2025.docx" class="btn btn-outline" download>Download Resume <i
-                            class="fas fa-download"></i></a>
-                </div>
+    <header class="nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <div class="brand-mark"></div>
+                <a href="#" class="brand-text">Sharmin <span>Joya</span></a>
             </div>
-            <div class="hero-image-container">
-                <div class="hero-image-placeholder">
-                    <img src="profile.jpg" alt="Sharmin Shobnom Joya"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 30px;">
-                </div>
-            </div>
+            <nav class="nav-links">
+                <a href="#about"><span class="dot"></span>About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact" class="nav-cta">
+                    <span class="nav-cta-icon"><i class="fas fa-envelope"></i></span>
+                    <span>Contact Me</span>
+                </a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am an accomplished professional with over 20 years of experience in Bangladesh’s development
-                        sector, specializing in project management, advocacy, and leadership development. I have a
-                        proven track record of implementing impactful projects, fostering professional growth, and
-                        driving organizational development.</p>
-                    <p>Currently, I am pursuing a Ph.D. under the Public Health faculty. My career has provided me with
-                        extensive international exposure and a deep dedication to advancing gender equality and
-                        community development.</p>
-                    <div class="video-link">
+    <main>
+        <div class="shell">
+            <!-- HERO -->
+            <section class="hero" id="home">
+                <div>
+                    <div class="hero-kicker">
+                        <div class="hero-kicker-dot"></div>
+                        <span>Project Management & Advocacy Specialist</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Driving change through <span class="highlight">impactful leadership</span>.
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Over <strong>20 years of experience</strong> in Bangladesh’s development sector, fostering
+                        professional growth and advancing gender equality.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="hero-primary" href="#contact">
+                            <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                            <span>Get in Touch</span>
+                        </a>
+                        <a class="hero-secondary" href="Resume_Sharmin_2025.docx" download>
+                            <span class="pulse"></span>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <div class="hero-meta-item">
+                            <span class="badge">Ph.D. Candidate</span>
+                        </div>
+                        <div class="hero-meta-item">
+                            <span>✨ 20+ Years Experience</span>
+                        </div>
+                        <div class="hero-meta-item">
+                            <span>🌍 International Exposure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO PREVIEW PANEL -->
+                <div class="hero-preview">
+                    <article class="hero-panel" id="heroPanel">
+                        <header class="hero-panel-header">
+                            <div class="hero-panel-tabs">
+                                <button class="hero-panel-tab hero-panel-tab--active" type="button">
+                                    <span class="light"></span>
+                                    Profile
+                                </button>
+                                <button class="hero-panel-tab" type="button">Stats</button>
+                            </div>
+                            <div class="hero-panel-pill">
+                                <span class="spark"></span>
+                                Open to Work
+                            </div>
+                        </header>
+
+                        <div class="hero-panel-body">
+                            <div class="hero-mesh">
+                                <div class="hero-mesh-gradient"></div>
+                                <div class="hero-mesh-left">
+                                    <h3 class="hero-mesh-title">Sharmin Shobnom Joya</h3>
+                                    <p class="hero-mesh-sub">Specialist in Advocacy, Gender, and Management.</p>
+
+                                    <div class="hero-mesh-pills">
+                                        <div class="chip">
+                                            <div class="chip-dot"></div>
+                                            Leadership
+                                        </div>
+                                        <div class="chip">
+                                            <div class="chip-dot"></div>
+                                            Advocacy
+                                        </div>
+                                        <div class="chip">
+                                            <div class="chip-dot"></div>
+                                            Research
+                                        </div>
+                                    </div>
+
+                                    <div class="hero-mesh-meters">
+                                        <div class="meter-row">
+                                            <span class="meter-label">Mgmt</span>
+                                            <div class="meter-bar">
+                                                <div class="meter-fill" data-fill="0.95"></div>
+                                            </div>
+                                            <span class="meter-value">95%</span>
+                                        </div>
+                                        <div class="meter-row">
+                                            <span class="meter-label">Policy</span>
+                                            <div class="meter-bar">
+                                                <div class="meter-fill" data-fill="0.90"></div>
+                                            </div>
+                                            <span class="meter-value">90%</span>
+                                        </div>
+                                        <div class="meter-row">
+                                            <span class="meter-label">Gender</span>
+                                            <div class="meter-bar">
+                                                <div class="meter-fill" data-fill="0.98"></div>
+                                            </div>
+                                            <span class="meter-value">98%</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hero-mesh-right">
+                                    <div class="hero-mesh-right-card">
+                                        <div>
+                                            <div class="hero-mesh-right-card-title">Experience</div>
+                                            <div class="hero-mesh-right-card-label">20+ Years</div>
+                                        </div>
+                                        <div class="hero-mesh-right-card-tag">Senior</div>
+                                    </div>
+                                    <div class="hero-mesh-right-card">
+                                        <div>
+                                            <div class="hero-mesh-right-card-title">Education</div>
+                                            <div class="hero-mesh-right-card-label">Ph.D. (Ongoing)</div>
+                                        </div>
+                                        <div class="hero-mesh-right-card-tag">Academic</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="hero-web-preview">
+                                <div class="hero-web-bar">
+                                    <div class="hero-web-balls">
+                                        <span class="hero-web-dot"></span>
+                                        <span class="hero-web-dot"></span>
+                                        <span class="hero-web-dot"></span>
+                                    </div>
+                                    <div class="hero-web-url">latest-publication.pdf</div>
+                                </div>
+                                <div class="hero-web-body">
+                                    <div>
+                                        <div class="hero-web-main-title">Recent Publication</div>
+                                        <p class="hero-web-tagline">"The necessity to create a congenial environment..."
+                                        </p>
+                                        <div class="hero-web-chip-row">
+                                            <span class="hero-web-pill">Journal</span>
+                                            <span class="hero-web-pill">Research</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+            <section id="about">
+                <div class="section-heading">
+                    <h2 class="section-title"><span>01</span> About Me</h2>
+                    <p class="section-subtitle">A dedicated professional with a passion for development and equality.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card" data-delay="0" style="grid-column: span 2;">
+                        <div class="card-icon"><i class="fas fa-user"></i></div>
+                        <h3 class="card-title">My Journey</h3>
+                        <p class="card-body" style="font-size: 0.95rem; line-height: 1.6;">
+                            I am an accomplished professional with over 20 years of experience in Bangladesh’s
+                            development sector, specializing in project management, advocacy, and leadership
+                            development. Currently pursuing a Ph.D. in Public Health, I have a proven track record of
+                            implementing impactful projects and fostering professional growth.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Project Management</span>
+                            <span class="tag">Advocacy</span>
+                            <span class="tag">Leadership</span>
+                        </div>
+                    </article>
+
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-video"></i></div>
+                        <h3 class="card-title">Video Biography</h3>
+                        <p class="card-body">
+                            Learn more about my work and vision through my video biography.
+                        </p>
                         <a href="https://drive.google.com/file/d/1PN3kkoi1ab-7u7OOVsBn2OIIw-stz14j/view?usp=drive_link"
-                            target="_blank" class="btn btn-text">Watch Video Biography <i
-                                class="fas fa-play-circle"></i></a>
-                    </div>
+                            target="_blank" class="hero-secondary" style="margin-top: 10px; font-size: 0.75rem;">
+                            <span class="pulse"></span> Watch Video
+                        </a>
+                    </article>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">4</span>
-                        <span class="stat-label">Countries Exposed</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">Ph.D.</span>
-                        <span class="stat-label">Candidate</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <!-- Job 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">May 2018 – Dec 2023</div>
-                    <div class="timeline-content">
-                        <h3>Project Manager</h3>
-                        <h4>Bangladesh Midwifery Society (BMS) | UNFPA-Supported Project</h4>
-                        <ul>
-                            <li>Developed and implemented annual work plans and budgets.</li>
-                            <li>Spearheaded advocacy initiatives, engaging stakeholders and media.</li>
-                            <li>Transformed membership systems from manual to digital.</li>
-                            <li>Organized two national executive committee elections.</li>
-                            <li>Mentored 54 midwives in leadership development.</li>
-                        </ul>
-                    </div>
+            <!-- EXPERIENCE SECTION -->
+            <section id="experience">
+                <div class="section-heading">
+                    <h2 class="section-title"><span>02</span> Work Experience</h2>
+                    <p class="section-subtitle">A timeline of my professional career and key roles.</p>
                 </div>
-                <!-- Job 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jun 2016 – Nov 2017</div>
-                    <div class="timeline-content">
-                        <h3>Coordinator – Resource Mobilization & Advocacy</h3>
-                        <h4>Muslim Aid – UK Bangladesh Field Office</h4>
-                        <ul>
-                            <li>Directed gender mainstreaming across programs and projects.</li>
-                            <li>Developed project proposals and ensured donor compliance.</li>
-                            <li>Designed advocacy materials, including reports, videos, and IEC tools.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Job 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jun 2010 – May 2016</div>
-                    <div class="timeline-content">
-                        <h3>Office Coordinator</h3>
-                        <h4>Muslim Aid – UK Bangladesh Field Office</h4>
-                        <ul>
-                            <li>Oversaw program development, donor relations, and stakeholder networking.</li>
-                            <li>Managed partnership engagements and administrative functions.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Job 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Jan 2010 – May 2010</div>
-                    <div class="timeline-content">
-                        <h3>Program Assistant</h3>
-                        <h4>USAID-funded PRICE Project</h4>
-                        <ul>
-                            <li>Supported value chain programs and conducted monitoring & evaluation.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Job 5 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Apr 2006 – Mar 2008</div>
-                    <div class="timeline-content">
-                        <h3>Asset Administrator & Department Secretary</h3>
-                        <h4>Huawei Technologies Bangladesh Ltd.</h4>
-                        <ul>
-                            <li>Handled procurement, logistics, and asset administration.</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Job 6 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">Apr 2005 – Mar 2006</div>
-                    <div class="timeline-content">
-                        <h3>Project Secretary – Outreach Department</h3>
-                        <h4>USAID-funded SISIMPUR Project</h4>
-                        <ul>
-                            <li>Office administration and reporting, organize training/meeting, develop and distribute
-                                educational materials for the Early Childhood Education and Development (ECED) Program.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-tasks"></i>
-                    <h3>Project Management</h3>
-                    <p>Planning, Budgeting & Resource Mobilization</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-bullhorn"></i>
-                    <h3>Advocacy</h3>
-                    <p>Communication Strategies & Stakeholder Engagement</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Leadership</h3>
-                    <p>Team Building & Mentoring</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-venus-mars"></i>
-                    <h3>Gender Mainstreaming</h3>
-                    <p>Advancing Gender Equality</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Research</h3>
-                    <p>Policy Development, Monitoring & Evaluation</p>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Digital Skills</h3>
-                    <p>MS Office, Digital Transformation, AI Tools</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <div class="grid-3">
+                    <!-- Job 1 -->
+                    <article class="card" data-delay="0">
+                        <div class="card-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3 class="card-title">Project Manager</h3>
+                        <p class="card-body" style="color: var(--yellow); font-weight: 500;">Bangladesh Midwifery
+                            Society (BMS)</p>
+                        <p class="card-body">May 2018 – Dec 2023</p>
+                        <p class="card-body">
+                            Spearheaded advocacy, managed budgets, and transformed membership systems to digital.
+                            Mentored 54 midwives.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">UNFPA-Supported</span>
+                            <span class="tag">Management</span>
+                        </div>
+                    </article>
 
-    <!-- Education Section -->
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="edu-card">
-                    <div class="edu-year">Ongoing (2024-2026)</div>
-                    <h3>Ph.D. in Public Health</h3>
-                    <p class="institution">Selinus University of Sciences and Literature</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-year">2012 - 2013</div>
-                    <h3>MSS in Sociology & Anthropology</h3>
-                    <p class="institution">Asian University of Bangladesh</p>
-                    <p class="edu-note">GPA: 3.7 (Equivalent to Master’s degree by ECA Toronto University)</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-year">2012</div>
-                    <h3>PGD in Human Resources Management</h3>
-                    <p class="institution">Bangladesh Institute of HRM</p>
-                    <p class="edu-note">GPA: 3.8</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-year">2003</div>
-                    <h3>B.Sc. (Hons) in Computing & Information Systems</h3>
-                    <p class="institution">London Guildhall University</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                    <!-- Job 2 -->
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3 class="card-title">Coordinator – Advocacy</h3>
+                        <p class="card-body" style="color: var(--yellow); font-weight: 500;">Muslim Aid – UK</p>
+                        <p class="card-body">Jun 2016 – Nov 2017</p>
+                        <p class="card-body">
+                            Directed gender mainstreaming, developed proposals, and designed advocacy materials.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Resource Mobilization</span>
+                            <span class="tag">Gender</span>
+                        </div>
+                    </article>
 
-    <!-- Publications Section -->
-    <section id="publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Publications & Presentations</h2>
-            <div class="publications-list">
-                <div class="pub-item">
-                    <i class="fas fa-book-open"></i>
-                    <div class="pub-content">
-                        <h3>The necessity to create a congenial environment to develop women’s leadership</h3>
-                        <p>Published in Journals of Developing Studies, IISTE.</p>
-                        <a href="http://www.iiste.org/Journals/index.php/DCS/article/view/35239" target="_blank">Read
-                            Article <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                    <!-- Job 3 -->
+                    <article class="card" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-building"></i></div>
+                        <h3 class="card-title">Office Coordinator</h3>
+                        <p class="card-body" style="color: var(--yellow); font-weight: 500;">Muslim Aid – UK</p>
+                        <p class="card-body">Jun 2010 – May 2016</p>
+                        <p class="card-body">
+                            Oversaw program development, donor relations, and stakeholder networking.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Coordination</span>
+                            <span class="tag">Partnerships</span>
+                        </div>
+                    </article>
+
+                    <!-- Job 4 -->
+                    <article class="card" data-delay="0">
+                        <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3 class="card-title">Program Assistant</h3>
+                        <p class="card-body" style="color: var(--yellow); font-weight: 500;">USAID-funded PRICE Project
+                        </p>
+                        <p class="card-body">Jan 2010 – May 2010</p>
+                        <p class="card-body">
+                            Supported value chain programs and conducted monitoring & evaluation.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">M&E</span>
+                            <span class="tag">USAID</span>
+                        </div>
+                    </article>
+
+                    <!-- Job 5 -->
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-boxes"></i></div>
+                        <h3 class="card-title">Asset Administrator</h3>
+                        <p class="card-body" style="color: var(--yellow); font-weight: 500;">Huawei Technologies</p>
+                        <p class="card-body">Apr 2006 – Mar 2008</p>
+                        <p class="card-body">
+                            Handled procurement, logistics, and asset administration.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Logistics</span>
+                            <span class="tag">Procurement</span>
+                        </div>
+                    </article>
+
+                    <!-- Job 6 -->
+                    <article class="card" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-child"></i></div>
+                        <h3 class="card-title">Project Secretary</h3>
+                        <p class="card-body" style="color: var(--yellow); font-weight: 500;">USAID-funded SISIMPUR</p>
+                        <p class="card-body">Apr 2005 – Mar 2006</p>
+                        <p class="card-body">
+                            Office administration and reporting for Early Childhood Education program.
+                        </p>
+                        <div class="card-tags">
+                            <span class="tag">Education</span>
+                            <span class="tag">Admin</span>
+                        </div>
+                    </article>
                 </div>
-                <div class="pub-item">
-                    <i class="fas fa-microphone-alt"></i>
-                    <div class="pub-content">
-                        <h3>Innovation and reciprocity in twinning</h3>
-                        <p>Presented at Commonwealth Nursing and Midwifery Conference, London, UK (2020).</p>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills">
+                <div class="section-heading">
+                    <h2 class="section-title"><span>03</span> Core Competencies</h2>
+                    <p class="section-subtitle">Key skills developed over two decades of service.</p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card" data-delay="0">
+                        <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                        <h3 class="card-title">Project Management</h3>
+                        <p class="card-body">Planning, Budgeting & Resource Mobilization</p>
+                    </article>
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3 class="card-title">Advocacy</h3>
+                        <p class="card-body">Communication Strategies & Stakeholder Engagement</p>
+                    </article>
+                    <article class="card" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="card-title">Leadership</h3>
+                        <p class="card-body">Team Building & Mentoring</p>
+                    </article>
+                    <article class="card" data-delay="0">
+                        <div class="card-icon"><i class="fas fa-venus-mars"></i></div>
+                        <h3 class="card-title">Gender Mainstreaming</h3>
+                        <p class="card-body">Advancing Gender Equality</p>
+                    </article>
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="card-title">Research</h3>
+                        <p class="card-body">Policy Development, Monitoring & Evaluation</p>
+                    </article>
+                    <article class="card" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="card-title">Digital Skills</h3>
+                        <p class="card-body">MS Office, Digital Transformation, AI Tools</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- EDUCATION SECTION -->
+            <section id="education">
+                <div class="section-heading">
+                    <h2 class="section-title"><span>04</span> Education</h2>
+                    <p class="section-subtitle">Academic background and qualifications.</p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card" data-delay="0">
+                        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="card-title">Ph.D. in Public Health</h3>
+                        <p class="card-body">Selinus University (Ongoing)</p>
+                        <div class="card-tags"><span class="tag">2024-2026</span></div>
+                    </article>
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-university"></i></div>
+                        <h3 class="card-title">MSS in Sociology</h3>
+                        <p class="card-body">Asian University of Bangladesh</p>
+                        <div class="card-tags"><span class="tag">GPA 3.7</span></div>
+                    </article>
+                    <article class="card" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                        <h3 class="card-title">PGD in HRM</h3>
+                        <p class="card-body">Bangladesh Institute of HRM</p>
+                        <div class="card-tags"><span class="tag">GPA 3.8</span></div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- PUBLICATIONS SECTION -->
+            <section id="publications">
+                <div class="section-heading">
+                    <h2 class="section-title"><span>05</span> Publications</h2>
+                    <p class="section-subtitle">Research papers and conference presentations.</p>
+                </div>
+
+                <div class="grid-3">
+                    <article class="card" data-delay="0">
+                        <div class="card-icon"><i class="fas fa-book-open"></i></div>
+                        <h3 class="card-title">Women's Leadership</h3>
+                        <p class="card-body">Published in Journals of Developing Studies, IISTE.</p>
+                        <a href="http://www.iiste.org/Journals/index.php/DCS/article/view/35239" target="_blank"
+                            class="tag" style="text-decoration: none; color: var(--yellow);">Read Article</a>
+                    </article>
+                    <article class="card" data-delay="100">
+                        <div class="card-icon"><i class="fas fa-microphone-alt"></i></div>
+                        <h3 class="card-title">Innovation in Twinning</h3>
+                        <p class="card-body">Presented at Commonwealth Nursing Conference, London.</p>
                         <a href="https://www.commonwealthnurses.org/conference2020/documents/CNMF2020BookofAbstracts.pdf"
-                            target="_blank">View Abstract <i class="fas fa-external-link-alt"></i></a>
-                    </div>
+                            target="_blank" class="tag" style="text-decoration: none; color: var(--yellow);">View
+                            Abstract</a>
+                    </article>
+                    <article class="card" data-delay="200">
+                        <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+                        <h3 class="card-title">Midwives' Dual Role</h3>
+                        <p class="card-body">Published in Journal of Asian Midwives (JAM).</p>
+                        <a href="https://ecommons.aku.edu/jam/vol9/iss1/3/" target="_blank" class="tag"
+                            style="text-decoration: none; color: var(--yellow);">Read Journal</a>
+                    </article>
                 </div>
-                <div class="pub-item">
-                    <i class="fas fa-newspaper"></i>
-                    <div class="pub-content">
-                        <h3>Midwives’ Associations’ Dual Role</h3>
-                        <p>Published in Journal of Asian Midwives (JAM).</p>
-                        <a href="https://ecommons.aku.edu/jam/vol9/iss1/3/" target="_blank">Read Journal <i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="pub-item">
-                    <i class="fas fa-video"></i>
-                    <div class="pub-content">
-                        <h3>Promoting inclusivity in Bangladesh through digital innovation</h3>
-                        <p>Royal College of Midwives (RCM) Conference (2022).</p>
-                        <a href="https://www.rcm.org.uk/promoting/international-hub/the-work-we-do/"
-                            target="_blank">Watch Video <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title text-white">Get In Touch</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>Flat-3A, 178, Asha Villa, Adarshawpara, Uttarkhan, Dhaka-1230</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+88 01760008559, 01834003407</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>ssjoya@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p>Sharmin Shobnom Joya</p>
-                        </div>
-                    </div>
+            <!-- CONTACT SECTION -->
+            <section id="contact">
+                <div class="section-heading">
+                    <h2 class="section-title"><span>06</span> Get In Touch</h2>
+                    <p class="section-subtitle">Feel free to reach out for collaborations.</p>
                 </div>
-                <div class="contact-form-container">
-                    <form class="contact-form" name="contact" method="POST" data-netlify="true">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Sharmin Shobnom Joya. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Address</h3>
+                                <p>Uttarkhan, Dhaka-1230</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+88 01760008559</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>ssjoya@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h3>LinkedIn</h3>
+                                <p>Sharmin Shobnom Joya</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" name="contact" method="POST" data-netlify="true">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div>© 2025 Sharmin Shobnom Joya. All Rights Reserved.</div>
+                <div class="foot-pill">
+                    <span class="dot-yellow"></span>
+                    <span>Designed with Motion UI</span>
+                </div>
+            </footer>
         </div>
-    </footer>
+    </main>
+
+    <div class="scroll-hint" id="scrollHint">
+        <div class="scroll-hint-badge">↓</div>
+        <span>Scroll down — cards animate into place.</span>
+    </div>
 
     <script src="script.js"></script>
 </body>

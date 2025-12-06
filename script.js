@@ -1,88 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
-    const mobileMenu = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
+    // Animate meters when hero is visible
+    const meterFills = document.querySelectorAll('.meter-fill');
+    const cards = document.querySelectorAll('.card');
+    const scrollHint = document.getElementById('scrollHint');
 
-    mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // Navbar Scroll Effect
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-            navbar.style.padding = '10px 0';
-        } else {
-            navbar.style.boxShadow = 'none';
-            navbar.style.padding = '15px 0';
-        }
-    });
-
-    // Smooth Scrolling with Offset
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                const headerOffset = 80;
-                const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // Intersection Observer for Animations
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    const metersObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
+                meterFills.forEach(fill => {
+                    const scale = parseFloat(fill.dataset.fill || '1');
+                    requestAnimationFrame(() => {
+                        fill.style.transition = 'transform 900ms cubic-bezier(0.16, 1, 0.3, 1)';
+                        fill.style.transform = `scaleX(${scale})`;
+                    });
+                });
+                observer.disconnect();
             }
         });
-    }, observerOptions);
-
-    // Add animation classes to elements
-    const animatedElements = document.querySelectorAll('.section-title, .about-text, .stat-item, .timeline-item, .skill-card, .edu-card, .pub-item, .contact-item, .contact-form-container');
-    
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(el);
+    }, {
+        threshold: 0.4
     });
 
-    // Add CSS class for animation
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .animate-in {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+    const heroPanel = document.getElementById('heroPanel');
+    if (heroPanel) {
+        metersObserver.observe(heroPanel);
+    }
+
+    // Scroll‑reveal cards
+    const cardsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const card = entry.target;
+            if (entry.isIntersecting) {
+                const delay = parseInt(card.dataset.delay || '0', 10);
+                setTimeout(() => {
+                    card.classList.add('card-active');
+                }, delay);
+                cardsObserver.unobserve(card);
+            }
+        });
+    }, {
+        threshold: 0.16
+    });
+
+    cards.forEach(card => cardsObserver.observe(card));
+
+    // Scroll hint visibility
+    let hintShown = false;
+    window.addEventListener('scroll', () => {
+        if (hintShown) return;
+        if (window.scrollY > 60) {
+            hintShown = true;
+            scrollHint.classList.add('scroll-hint-visible');
+            setTimeout(() => {
+                scrollHint.classList.remove('scroll-hint-visible');
+            }, 3800);
         }
-    `;
-    document.head.appendChild(style);
+    });
+
+    // Small hover wiggle on hero panel using mouse position
+    const motionPanel = document.getElementById('heroPanel');
+    if (motionPanel) {
+        let bounding = null;
+        const updateBounding = () => { bounding = motionPanel.getBoundingClientRect(); };
+        updateBounding();
+        window.addEventListener('resize', updateBounding);
+
+        motionPanel.addEventListener('mousemove', (e) => {
+            if (!bounding) return;
+            const x = (e.clientX - bounding.left) / bounding.width - 0.5;
+            const y = (e.clientY - bounding.top) / bounding.height - 0.5;
+            const rotateX = y * 6;
+            const rotateY = -x * 10;
+            motionPanel.style.transform = `perspective(1100px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-4px)`;
+        });
+
+        motionPanel.addEventListener('mouseleave', () => {
+            motionPanel.style.transform = 'perspective(1100px) rotateY(-14deg) rotateX(4deg)';
+        });
+    }
 });
