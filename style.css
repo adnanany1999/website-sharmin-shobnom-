@@ -444,6 +444,7 @@ main {
     display: flex;
     align-items: stretch;
     justify-content: center;
+    animation: floatSimple 6s ease-in-out infinite alternate;
 }
 
 .hero-panel {
@@ -1166,21 +1167,33 @@ footer .dot-yellow {
 }
 
 /* HERO IMAGE 3D */
+/* HERO PREVIEW CARD */
+.hero-preview {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /* Move float animation here so it doesn't conflict with JS tilt on the child */
+    animation: floatSimple 6s ease-in-out infinite alternate;
+}
+
+/* ... existing hero-panel styles ... */
+
+/* HERO IMAGE 3D */
 .hero-image-container {
     position: relative;
     width: 100%;
     max-width: 400px;
-    /* Slightly smaller than the card */
     perspective: 1100px;
     transform-origin: center;
-    /* Initial transform is handled by JS or animation, but setting base here */
+    /* Initial rotation */
     transform: perspective(1100px) rotateY(-14deg) rotateX(4deg);
-    transition: transform 280ms ease-out;
-    /* Initial float animation */
-    animation: floatImage 6s ease-in-out infinite alternate;
+    transition: transform 100ms ease-out;
+    /* Faster transition for smoother mouse follow */
+    /* Animation removed from here to allow JS control */
 }
 
-/* Note: JS handles the hover tilt effect on #heroPanel, so we just need the base styles */
+/* Note: JS handles the hover tilt effect on #heroPanel */
 
 .hero-image-3d {
     width: 100%;
@@ -1192,12 +1205,55 @@ footer .dot-yellow {
     display: block;
 }
 
-@keyframes floatImage {
+@keyframes floatSimple {
     0% {
-        transform: perspective(1100px) rotateY(-14deg) rotateX(4deg) translateY(0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: perspective(1100px) rotateY(-14deg) rotateX(4deg) translateY(-20px);
+        transform: translateY(-20px);
     }
+}
+
+/* Highlighted Section */
+#publications {
+    position: relative;
+    border: 1px solid rgba(255, 214, 0, 0.15);
+    background: radial-gradient(circle at top right, rgba(255, 214, 0, 0.03), transparent 60%),
+        linear-gradient(180deg, rgba(255, 214, 0, 0.02), transparent);
+    border-radius: 30px;
+    padding: 40px;
+    margin: 60px 0;
+    box-shadow: 0 0 60px rgba(255, 214, 0, 0.05);
+    overflow: hidden;
+}
+
+#publications::before {
+    content: "FEATURED";
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: var(--yellow);
+    color: #000;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 30px;
+    transform: rotate(45deg);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+#publications .section-title span {
+    color: var(--yellow);
+    text-shadow: 0 0 20px rgba(255, 214, 0, 0.4);
+}
+
+#publications .card {
+    border: 1px solid rgba(255, 214, 0, 0.1);
+    background: rgba(15, 15, 25, 0.8);
+}
+
+#publications .card:hover {
+    border-color: var(--yellow);
+    box-shadow: 0 10px 40px rgba(255, 214, 0, 0.15);
 }
